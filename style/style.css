@@ -1,0 +1,148 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.post-link {
+  text-decoration: none;
+}
+
+header {
+  height: 20em;
+  background: #222;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../assets/banner.jpeg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+header > * {
+  z-index: 1;
+}
+header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.profile-img {
+  width: 5em;
+  height: 5em;
+  background-color: #fff;
+  border-radius: 50%;
+  background-image: url("../assets/profile.png");
+  background-size: cover;
+}
+
+.profile-name {
+  font: bold 3em sans-serif;
+}
+
+.subtext {
+  margin-top: 1em;
+}
+
+.main {
+  background: #ddd;
+  /* height: 8em; */
+  margin-top: 4em;
+  display: flex;
+  justify-content: center;
+}
+
+.main-container {
+  max-width: 750px;
+  min-width: 600px;
+  padding: 1em 1em;
+}
+.post {
+  display: flex;
+  border: 1px solid #eaecee;
+  border-radius: 0.5em;
+  min-height: 200px;
+  overflow: hidden;
+  cursor: pointer;
+  margin-top: 24px;
+}
+.post:hover {
+  transform: translate3d(0, -5px, 0);
+  box-shadow: 0 2rem 5rem 0 rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.post-image {
+  flex-basis: 40%;
+  /* width: 10em;
+  height: 10em;
+   */
+  background-image: url("http://source.unsplash.com/1600x900/?buildings");
+  background-size: cover;
+  background-position: center;
+}
+.post-content {
+  flex-basis: 60%;
+  padding: 2em;
+}
+.post-date {
+  font: 600 0.8em sans-serif;
+  color: #adb5bd;
+}
+
+.post-title {
+  margin-top: 2em;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.post-title h4 {
+  margin: 0;
+}
+.post-text {
+  margin-top: 1em;
+  color: #495057;
+  font: 400 1em sans-serif;
+  line-height: 1.4;
+  max-height: 65px;
+  overflow: hidden;
+}
+
+footer {
+  min-height: 100px;
+  background-color: #eaecee70;
+  color: #929eaa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  font-size: 14px;
+}
+
+.nav-button.new-post-button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  font: bold 3em sans-serif;
+  width: 1em;
+  height: 1em;
+  background: #004186;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  transition: all 0.25s ease;
+}
+
+.nav-button.new-post-button:hover {
+  background: #002349;
+}
