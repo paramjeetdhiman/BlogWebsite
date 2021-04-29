@@ -23,7 +23,10 @@ const buildPosts = (blogPosts) => {
   blogPosts.forEach((post) => {
     const postDate = new Date(parseInt(post.added_date)).toDateString();
     const postImg = `${API_BASE_URL}${post.post_image}`;
+    const postLink = `post.html?id=${post.id}`;
+
     blogPostContent += `
+    <a class="post-link" href="${postLink}" >
       <div class="post">
           <div class="post-image" style="background-image:url(${postImg})"></div>
           <div class="post-content">
@@ -32,6 +35,7 @@ const buildPosts = (blogPosts) => {
             <div class="post-text">${post.content}</div>
           </div>
         </div>
+        </a>
         `;
 
     document.querySelector(".blog-posts").innerHTML = blogPostContent;

@@ -9,20 +9,18 @@ body {
 
 header {
   height: 20em;
-  background: #222;
   color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url(../assets/banner.jpeg);
   background-size: cover;
   background-position: center;
   position: relative;
 }
 
 header > * {
-  z-index: 1;
+  z-index: 10;
 }
 header::after {
   content: "";
@@ -32,6 +30,10 @@ header::after {
   left: 0;
   right: 0;
   background-color: rgba(0, 0, 0, 0.7);
+}
+
+.home-page header {
+  background-image: url(../assets/banner.jpeg);
 }
 
 .profile-img {
@@ -149,4 +151,10 @@ footer {
   border: 1px solid #004186;
   border-radius: 5px;
   padding: 5px 8px;
+}
+a {
+  text-decoration: none;
+}
+a.post-link {
+  text-decoration: none;
 }

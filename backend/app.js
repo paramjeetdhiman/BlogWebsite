@@ -3,11 +3,13 @@ const app = express();
 const Post = require("./api/modules/Post");
 const postsData = new Post();
 
+/// cors resolve
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
   next();
 });
 
+/// upload static images
 app.use("/uploads", express.static("uploads"));
 
 app.get("/api/posts", (req, res) => {
