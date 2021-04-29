@@ -81,9 +81,6 @@ header::after {
 
 .post-image {
   flex-basis: 40%;
-
-  /* http://source.unsplash.com/1600x900/?buildings */
-  background-image: url("https://images.unsplash.com/photo-1595743824479-711892539a65?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80");
   background-size: cover;
   background-position: center;
 }
